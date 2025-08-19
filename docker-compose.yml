@@ -1,0 +1,27 @@
+
+services:
+  api:
+    build: .
+    container_name: biblioteca_api
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+      - DB_HOST=db
+    depends_on:
+      - db
+
+  db:
+    image: postgres:15
+    container_name: biblioteca_db
+    environment:
+      - POSTGRES_USER=biblioteca_user
+      - POSTGRES_PASSWORD=biblioteca_pass
+      - POSTGRES_DB=biblioteca_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data: {}
