@@ -43,7 +43,7 @@ Antes de começar, você vai precisar ter instalado em sua máquina:
 
 1. Clone este repositório:
    ```bash
-   git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+   git clone [https://github.com/kauansantanaa/Gestao-de-Biblioteca]
    ```
 
 2. Navegue até a pasta raiz do projeto:
